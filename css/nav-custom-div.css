@@ -1,30 +1,139 @@
 .nav-custom-div {
-  overflow-x: scroll;
-  overflow-y: none;
-  padding: 10px;
-  margin: 0.2rem;
+  overflow: hidden;
   display: flex;
   align-items: center;
-
+  max-height: 45px;
+  padding: 20px;
+  margin: 0rem;
   gap: 10px;
-
-  max-height: 45px; /* More than this will cause issues with hamburger */
 }
 
-#menu-toggle.box{
-    margin-bottom: 0px !important;
-    margin-left: .5rem;
+#menu-toggle.box {
+  margin-bottom: 0px !important;
+  margin-left: 0.5rem;
 }
 
+.VTopHeader {
+  background-image: linear-gradient(#2555d1, #2455d5) !important;
+}
 .btnItem {
   size: 1.2ch;
   color: white;
-  margin: 0.5rem;
+  margin: 1rem;
   height: 100%;
   transition: 0.3s;
 }
 
+.btnItem {
+  position: relative;
+  display: inline-block;
+}
+
+.btnItem::before {
+  content: '';
+  position: absolute;
+  border-radius: 7px;
+  top: -5px; /* Adjust this to control the vertical positioning */
+  left: -5px; /* Adjust this to control the horizontal positioning */
+  width: calc(100% + 10px); /* Adjust the width to include padding */
+  height: calc(100% + 10px); /* Adjust the height to include padding */
+  background-color: #0b38a8;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.btnItem:hover::before {
+  opacity: 1;
+}
+
 .btnItem:hover {
-  color: #afafaf;
+  color: white;
   text-decoration: dashed;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #2455d3 !important;
+  border-radius: 8px;
+  color: white !important;
+}
+
+.btn-success {
+  background-color: white !important;
+  border: 1px solid #335ed3 !important;
+  color: #2454d1 !important;
+}
+.custom-hamburger {
+  background-color: #1042c6;
+  border: 0px solid;
+  padding: 7px;
+  /* display: flex; */
+  border-radius: 7px;
+}
+
+#button-panel {
+  position: absolute;
+  z-index: 2;
+  min-height: fit-content;
+  height: auto;
+  border: 0px;
+  padding: 0px !important;
+  margin: -19px !important;
+  background-color: white !important;
+  border-radius: 10px;
+  /* overflow: hidden; */
+}
+
+/* Custom Body Styles Starts here */
+
+html,
+body {
+  font-family: system-ui !important;
+}
+.VTopBody {
+  background-color: rgb(245 245 245) !important;
+}
+
+code {
+  padding: 13px 25px !important;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 10px !important;
+}
+.box.box-info {
+  border-top-color: transparent !important;
+}
+
+.btn-primary,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background-color: #2454d1 !important;
+}
+.box {
+  position: relative;
+  border-radius: 10px !important;
+  background: #ffffff;
+  border: 6px solid #fdfdfd !important;
+  margin-bottom: 15px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.VTopBody {
+  padding-top: 47px;
+}
+
+#sidebar-wrapper {
+  border-radius: 10px !important;
+  padding: 10px !important;
+  margin: -19px !important;
+  min-height: fit-content !important;
+}
+
+.trim {
+  padding: 13px !important;
 }
